@@ -1,0 +1,50 @@
+@import "header-contacts.scss";
+
+.page-header {
+  background-color: #1b2d37;
+  color: #ffffff;
+}
+
+.page-header__wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.page-header__logo-wrapper {
+  margin-right: auto;
+}
+
+.page-header__logo {
+  display: block;
+  min-width: 205px;
+  margin-top: 33px;
+  margin-left: 3px;
+}
+
+.page-header__logo-text {
+  margin-top: -46px;
+  margin-left: 68px;
+  font-weight: 700;
+  font-size: 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 29px;
+}
+
+.page-header__logo-description {
+  margin-top: -24px;
+  margin-left: 68px;
+  color: #788891;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 14px;
+  text-transform: lowercase;
+}
+
+.page-header__list {
+  margin-top: 31px;
+}
