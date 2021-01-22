@@ -1,0 +1,86 @@
+{
+  "name": "smart-device",
+  "version": "1.0.0",
+  "description": "Проект Smart Device",
+  "main": "index.html",
+  "browserslist": "defaults",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint 'source/**/*.{css,scss}' --max-warnings 0",
+    "eslint": "eslint 'source/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maskell/smart-device.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maskell/smart-device/issues"
+  },
+  "homepage": "https://github.com/Maskell/smart-device#readme",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^10.2.3",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^4.1.10",
+    "del": "^6.0.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-htmlacademy": "^2.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-purgecss": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-terser": "^2.0.1",
+    "gulp-webp": "^4.0.1",
+    "husky": "^4.3.8",
+    "imagemin-webp": "^6.0.0",
+    "lint-staged": "^10.5.3",
+    "postcss": "^8.2.4",
+    "posthtml-include": "^1.6.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.9.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "stylelint-config-hudochenkov": "^5.0.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix --max-warnings 0"
+    ],
+    "*.{md,js,css,scss,json,html}": "prettier --write"
+  }
+}

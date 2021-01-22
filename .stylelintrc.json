@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "stylelint-a11y/recommended",
+    "stylelint-config-hudochenkov/full",
+    "stylelint-config-htmlacademy",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-scss", "stylelint-order", "stylelint-a11y"],
+  "rules": {}
+}
