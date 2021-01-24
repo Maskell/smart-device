@@ -1,5 +1,3 @@
-@import "header-contacts.scss";
-
 .page-header {
   background-color: #1b2d37;
   color: #ffffff;
@@ -10,24 +8,25 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding-top: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
-}
-
-.page-header__logo-wrapper {
-  margin-right: auto;
 }
 
 .page-header__logo {
   display: block;
-  min-width: 205px;
-  margin-top: 33px;
+  margin-right: auto;
+}
+
+.page-header__logo-image {
+  margin-top: 23px;
   margin-left: 3px;
 }
 
 .page-header__logo-text {
-  margin-top: -46px;
-  margin-left: 68px;
+  margin-top: -50px;
+  margin-left: 71px;
   font-weight: 700;
   font-size: 25px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -36,7 +35,7 @@
 
 .page-header__logo-description {
   margin-top: -24px;
-  margin-left: 68px;
+  margin-left: 71px;
   color: #788891;
   font-weight: 500;
   font-size: 12px;
@@ -45,6 +44,69 @@
   text-transform: lowercase;
 }
 
-.page-header__list {
-  margin-top: 31px;
+.page-header__contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 670px;
+  margin-top: 40px;
+  padding-left: 0;
+  list-style: none;
+  font-size: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+}
+
+.page-header__contacts-item {
+  position: relative;
+}
+
+.page-header__contacts-item a {
+  color: #ffffff;
+}
+
+.page-header__contacts-item--email a {
+  padding-left: 44px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 19px;
+    height: 14px;
+    background-image: url("../img/icon-envelope.svg");
+  }
+}
+.page-header__contacts-item--phone-number {
+  margin-left: 78px;
+}
+
+.page-header__contacts-item--phone-number a {
+  padding-left: 44px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-phone-call.svg");
+  }
+}
+
+.page-header__contacts-item--call-back a {
+  margin-top: -13px;
+  margin-left: 49px;
+  padding-top: 13px;
+  padding-right: 27px;
+  padding-bottom: 14px;
+  padding-left: 26px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
 }

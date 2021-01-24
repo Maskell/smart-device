@@ -33,3 +33,20 @@
     url("../fonts/RobotoCondensed-Regular.woff") format("woff");
   font-display: swap;
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
