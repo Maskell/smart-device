@@ -1,0 +1,203 @@
+.page-footer {
+  margin-top: 3641px;
+  color: #1b2d37;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.page-footer__logo {
+  display: block;
+}
+
+.page-footer__logo-image {
+  margin-top: 55px;
+  margin-left: 2px;
+}
+
+.page-footer__logo-text {
+  margin-top: -50px;
+  margin-left: 70px;
+  font-weight: 700;
+  font-size: 25px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 29px;
+}
+
+.page-footer__logo-description {
+  margin-top: -24px;
+  margin-left: 70px;
+  color: #788891;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 14px;
+  text-transform: lowercase;
+}
+
+.page-footer__list {
+  padding-left: 0;
+  list-style: none;
+  font-size: 15px;
+  font-family: "PT Mono", "Courier New", monospace;
+  line-height: 25px;
+}
+
+.page-footer__list--social {
+  display: flex;
+  margin-top: 51px;
+  margin-left: -2px;
+}
+
+.page-footer__social-item--facebook {
+  margin-right: 7px;
+}
+
+.page-footer__social-item--odnoklassniki {
+  margin-right: 8px;
+}
+
+.page-footer__social-item a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-footer__social-item--facebook a {
+  background-image: url("../img/icon-facebook.svg");
+}
+
+.page-footer__social-item--odnoklassniki a {
+  background-image: url("../img/icon-odnoklassniki.svg");
+}
+
+.page-footer__social-item--vk a {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.page-footer__sitemap-wrapper {
+  margin-bottom: 33px;
+  margin-left: 93px;
+}
+
+.page-footer__heading {
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.page-footer__heading--sitemap {
+  margin-top: 55px;
+  margin-bottom: 25px;
+  margin-left: 2px;
+}
+
+.page-footer__list--sitemap {
+  column-count: 2;
+  column-gap: 74px;
+}
+
+.page-footer__sitemap-item {
+  max-width: 234px;
+}
+
+.page-footer__sitemap-item a {
+  color: #1b2d37;
+  opacity: 0.5;
+}
+
+.page-footer__contacts-wrapper {
+  margin-right: 6px;
+}
+
+.page-footer__heading--contacts {
+  margin-top: 55px;
+  margin-bottom: 25px;
+  margin-left: 4px;
+}
+
+.page-footer__list--contacts {
+  margin-left: 2px;
+  opacity: 0.5;
+}
+
+.page-footer__contacts-item a {
+  color: #1b2d37;
+}
+
+.page-footer__contacts-item p {
+  margin: 0;
+}
+
+.page-footer__copyright-wrapper {
+  width: 100%;
+  border-top: 1px solid rgba(98, 105, 98, 0.2);
+}
+
+.page-footer__list--copyright {
+  display: flex;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.page-footer__list--copyright p,
+.page-footer__list--copyright a {
+  margin: 0;
+  color: #1b2d37;
+  letter-spacing: 0.52px;
+}
+
+.page-footer__copyright-item {
+  margin-top: 1px;
+}
+
+.page-footer__copyright-item--rights {
+  margin-right: 5.2%;
+  margin-left: 12px;
+}
+
+.page-footer__copyright-item--years {
+  margin-right: 9.8%;
+}
+
+.page-footer__copyright-item--privacy {
+  margin-right: auto;
+}
+
+.page-footer__copyright-item--developer {
+  margin-right: 16px;
+}
+
+@media (max-width: $wrapper-max-width) {
+  .page-footer__list--sitemap {
+    column-count: 1;
+  }
+
+  .page-footer__sitemap-wrapper {
+    margin-left: 0;
+  }
+
+  .page-footer__contacts-wrapper {
+    margin-right: 0;
+  }
+}
