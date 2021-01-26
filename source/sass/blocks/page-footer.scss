@@ -1,5 +1,4 @@
 .page-footer {
-  margin-top: 3641px;
   color: #1b2d37;
 }
 
@@ -211,10 +210,6 @@
 }
 
 @media (max-width: $tablet-max-width) {
-  .page-footer {
-    margin-top: 3498px;
-  }
-
   .page-footer__logo-image {
     margin-top: 9px;
     margin-left: 15px;
@@ -293,10 +288,6 @@
 }
 
 @media (max-width: $mobile-max-width) {
-  .page-footer {
-    margin-top: 4115px;
-  }
-
   .page-footer__social-wrapper {
     flex-direction: column;
     align-items: center;

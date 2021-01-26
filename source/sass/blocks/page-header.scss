@@ -1,10 +1,12 @@
 .page-header {
-  background-color: #1b2d37;
+  position: absolute;
+  width: 100%;
   color: #ffffff;
 }
 
 .page-header__wrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
