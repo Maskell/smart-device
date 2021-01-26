@@ -94,3 +94,53 @@
   opacity: 0.5;
   transform: rotate(-90deg);
 }
+
+@media (max-width: $tablet-max-width) {
+  .promo {
+    background-image: url("../img/microcircuits-tablet@1x.png"),
+      url("../img/triangles.svg"), url("../img/particles-tablet@1x.png");
+    background-position: calc(30% + 418px) 113px, 50% -133px, center;
+    background-size: 465px 340px, 1515px 695px, cover;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/microcircuits-tablet@2x.png"),
+        url("../img/triangles.svg"), url("../img/particles-tablet@2x.png");
+    }
+  }
+
+  .promo__heading {
+    margin-right: 140px;
+    margin-left: 78px;
+    padding-top: 72px;
+    padding-bottom: 28px;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 4.2px;
+  }
+
+  .promo__description {
+    max-width: 490px;
+    margin-bottom: 55px;
+    margin-left: 129px;
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      top: 16px;
+      left: -48px;
+      width: 33px;
+    }
+  }
+
+  .promo__button {
+    max-width: 490px;
+    margin-bottom: 153px;
+    margin-left: 129px;
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+
+  .promo__link {
+    display: none;
+  }
+}
