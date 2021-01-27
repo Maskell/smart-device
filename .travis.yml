@@ -8,3 +8,11 @@ script:
   - npm test
   - npm run build
   - lhci autorun --upload.target=temporary-public-storage
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: build
+  on:
+    branch: main
