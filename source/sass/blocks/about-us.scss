@@ -43,6 +43,10 @@
   line-height: 22px;
 }
 
+.about-us__ellipsis {
+  display: none;
+}
+
 .about-us__button {
   display: inline-block;
   align-self: start;
@@ -59,4 +63,77 @@
   line-height: 16px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+}
+
+@media (max-width: $tablet-max-width) {
+  .about-us__wrapper {
+    margin-top: 0;
+    padding-left: 210px;
+
+    &::before {
+      top: 13px;
+      left: 0;
+      width: 244px;
+      height: 362px;
+      background-image: url("../img/2005-tablet@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/2005-tablet@2x.png");
+      }
+    }
+  }
+
+  .about-us h2 {
+    margin-top: 5px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .about-us p {
+    margin-top: -2px;
+    margin-bottom: 22px;
+    margin-left: 3px;
+  }
+
+  .about-us__ellipsis {
+    display: inline;
+  }
+
+  .about-us__more-text {
+    display: none;
+  }
+
+  .about-us__button {
+    margin-top: 19px;
+    margin-left: 3px;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .about-us__wrapper {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &::before {
+      content: none;
+    }
+  }
+
+  .about-us h2 {
+    margin-top: 11px;
+    margin-left: 4px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-us p {
+    margin-top: -2px;
+    margin-bottom: 42px;
+    margin-left: 7px;
+  }
+
+  .about-us__button {
+    margin-top: -14px;
+    margin-left: 7px;
+  }
 }
