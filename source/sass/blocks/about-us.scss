@@ -1,0 +1,62 @@
+.about-us__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 10px;
+  padding-right: 24px;
+  padding-left: 195px;
+  color: #666666;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: -15px;
+    width: 220px;
+    height: 317px;
+    background-image: url("../img/2005-desktop@1x.png");
+    background-size: cover;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/2005-desktop@2x.png");
+    }
+  }
+}
+
+.about-us h2 {
+  font-weight: 400;
+  font-size: 36px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 51px;
+}
+
+.about-us p {
+  margin-top: -10px;
+  margin-bottom: 31px;
+  font-size: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+  line-height: 22px;
+}
+
+.about-us__button {
+  display: inline-block;
+  align-self: start;
+  margin-top: 7px;
+  padding-top: 13px;
+  padding-right: 50px;
+  padding-bottom: 14px;
+  padding-left: 49px;
+  border: 1px solid #00b2ff;
+  border-radius: 5px;
+  color: #00b2ff;
+  font-size: 14px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}

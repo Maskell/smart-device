@@ -65,3 +65,19 @@ a {
   white-space: nowrap;
   clip-path: inset(50%);
 }
+
+.background-wrapper {
+  background-image: url("../img/advantages-triangles-desktop.svg");
+  background-position: -296px 45px;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-max-width) {
+    background-image: url("../img/advantages-triangle-tablet.svg");
+    background-position: 211px 90px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-position: -120px 652px;
+  }
+}
