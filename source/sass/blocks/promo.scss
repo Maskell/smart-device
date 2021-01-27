@@ -62,6 +62,7 @@
 
 .promo__button {
   display: inline-block;
+  vertical-align: middle;
   align-self: start;
   max-width: 610px;
   margin-bottom: 265px;
@@ -91,6 +92,7 @@
   bottom: 127px;
   left: -25px;
   display: inline-block;
+  vertical-align: middle;
   color: #ffffff;
   font-size: 14px;
   font-family: "PT Mono", "Courier New", monospace;
@@ -191,6 +193,7 @@
 
   .promo__button--mobile {
     display: inline-block;
+    vertical-align: middle;
     margin-bottom: 60px;
     margin-left: 8px;
     padding-right: 32px;
