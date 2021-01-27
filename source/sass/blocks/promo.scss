@@ -1,7 +1,7 @@
 .promo {
   background-color: #1b2d37;
   background-image: url("../img/microcircuits-desktop@1x.png"),
-    url("../img/triangles.svg"), url("../img/particles-desktop@1x.png");
+    url("../img/promo-triangles.svg"), url("../img/particles-desktop@1x.png");
   background-position: calc(50% + 430px) 258px, 50% 0, center;
   background-size: 705px 515px, 1920px 881px, cover;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/microcircuits-desktop@2x.png"),
-      url("../img/triangles.svg"), url("../img/particles-desktop@2x.png");
+      url("../img/promo-triangles.svg"), url("../img/particles-desktop@2x.png");
   }
 }
 
@@ -102,13 +102,13 @@
 @media (max-width: $tablet-max-width) {
   .promo {
     background-image: url("../img/microcircuits-tablet@1x.png"),
-      url("../img/triangles.svg"), url("../img/particles-tablet@1x.png");
+      url("../img/promo-triangles.svg"), url("../img/particles-tablet@1x.png");
     background-position: calc(30% + 418px) 113px, 50% -133px, center;
     background-size: 465px 340px, 1515px 695px, cover;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/microcircuits-tablet@2x.png"),
-        url("../img/triangles.svg"), url("../img/particles-tablet@2x.png");
+        url("../img/promo-triangles.svg"), url("../img/particles-tablet@2x.png");
     }
   }
 
@@ -152,13 +152,13 @@
 @media (max-width: $mobile-max-width) {
   .promo {
     background-image: url("../img/microcircuits-mobile@1x.png"),
-      url("../img/triangles.svg"), url("../img/particles-mobile@1x.png");
+      url("../img/promo-triangles.svg"), url("../img/particles-mobile@1x.png");
     background-position: calc(50% + 13px) 92px, calc(50% - 60px) -135px, center;
     background-size: 294px 220px, 1439px 664px, cover;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/microcircuits-mobile@2x.png"),
-        url("../img/triangles.svg"), url("../img/particles-mobile@2x.png");
+        url("../img/promo-triangles.svg"), url("../img/particles-mobile@2x.png");
     }
   }
 

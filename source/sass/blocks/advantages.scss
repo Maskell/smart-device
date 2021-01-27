@@ -1,5 +1,5 @@
 .advantages {
-  background-image: url("../img/main-triangles.svg");
+  background-image: url("../img/advantages-triangles-desktop.svg");
   background-position: -296px 45px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -88,4 +88,31 @@
 .advantages__item:hover svg,
 .advantages__item:focus svg {
   fill: #ffffff;
+}
+
+@media (max-width: $tablet-max-width) {
+  .advantages {
+    background-image: url("../img/advantages-triangle-tablet.svg");
+    background-position: 211px 90px;
+  }
+
+  .advantages__list {
+    margin-top: 29px;
+  }
+
+  .advantages__item {
+    min-height: 232px;
+    padding: 24px;
+    padding-right: 21px;
+    border-left-width: 2px;
+  }
+
+  .advantages__item h3 {
+    margin-top: 42px;
+  }
+
+  .advantages__item p {
+    margin-top: -7px;
+    margin-bottom: -5px;
+  }
 }
