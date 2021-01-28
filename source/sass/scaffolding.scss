@@ -2,8 +2,8 @@
   font-weight: normal;
   font-style: normal;
   font-family: "PT Mono";
-  src: url("../fonts/PTMono-Regular.woff2") format("woff2"),
-    url("../fonts/PTMono-Regular.woff") format("woff");
+  src: url("/fonts/PTMono-Regular.woff2") format("woff2"),
+    url("/fonts/PTMono-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -11,8 +11,8 @@
   font-weight: 500;
   font-style: normal;
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
-    url("../fonts/Roboto-Medium.woff") format("woff");
+  src: url("/fonts/Roboto-Medium.woff2") format("woff2"),
+    url("/fonts/Roboto-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -20,8 +20,8 @@
   font-weight: 700;
   font-style: normal;
   font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("/fonts/RobotoCondensed-Bold.woff2") format("woff2"),
+    url("/fonts/RobotoCondensed-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -29,8 +29,8 @@
   font-weight: normal;
   font-style: normal;
   font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("/fonts/RobotoCondensed-Regular.woff2") format("woff2"),
+    url("/fonts/RobotoCondensed-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -70,13 +70,13 @@ a {
 }
 
 .background-wrapper {
-  background-image: url("../img/advantages-triangles-desktop.svg");
+  background-image: url("/img/advantages-triangles-desktop.svg");
   background-position: -296px 45px;
   background-size: auto;
   background-repeat: no-repeat;
 
   @media (max-width: $tablet-max-width) {
-    background-image: url("../img/advantages-triangle-tablet.svg");
+    background-image: url("/img/advantages-triangle-tablet.svg");
     background-position: 211px 90px;
   }
 

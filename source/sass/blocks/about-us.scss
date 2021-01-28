@@ -20,11 +20,11 @@
     left: -15px;
     width: 220px;
     height: 317px;
-    background-image: url("../img/2005-desktop@1x.png");
+    background-image: url("/img/2005-desktop@1x.png");
     background-size: cover;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/2005-desktop@2x.png");
+      background-image: url("/img/2005-desktop@2x.png");
     }
   }
 }
@@ -78,10 +78,10 @@
       left: 0;
       width: 244px;
       height: 362px;
-      background-image: url("../img/2005-tablet@1x.png");
+      background-image: url("/img/2005-tablet@1x.png");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/2005-tablet@2x.png");
+        background-image: url("/img/2005-tablet@2x.png");
       }
     }
   }
