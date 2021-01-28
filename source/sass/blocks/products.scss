@@ -70,33 +70,33 @@
     bottom: 28px;
     width: 6px;
     height: 9px;
-    background-image: url("/img/icon-arrow-right.svg");
+    background-image: url("../img/icon-arrow-right.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 
 .products__item--production-boards a {
-  background-image: url("/img/production-boards-desktop@1x.png");
+  background-image: url("../img/production-boards-desktop@1x.png");
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("/img/production-boards-desktop@2x.png");
+    background-image: url("../img/production-boards-desktop@2x.png");
   }
 }
 
 .products__item--assembly-boards a {
-  background-image: url("/img/assembly-boards-desktop@1x.png");
+  background-image: url("../img/assembly-boards-desktop@1x.png");
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("/img/assembly-boards-desktop@2x.png");
+    background-image: url("../img/assembly-boards-desktop@2x.png");
   }
 }
 
 .products__item--components-lighting-engineering a {
-  background-image: url("/img/components-lighting-engineering-desktop@1x.png");
+  background-image: url("../img/components-lighting-engineering-desktop@1x.png");
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("/img/components-lighting-engineering-desktop@2x.png");
+    background-image: url("../img/components-lighting-engineering-desktop@2x.png");
   }
 }
 
@@ -138,10 +138,10 @@
   }
 
   .products__item--production-boards a {
-    background-image: url("/img/production-boards-tablet@1x.png");
+    background-image: url("../img/production-boards-tablet@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("/img/production-boards-tablet@2x.png");
+      background-image: url("../img/production-boards-tablet@2x.png");
     }
 
     &::before {
@@ -154,20 +154,20 @@
   }
 
   .products__item--assembly-boards a {
-    background-image: url("/img/assembly-boards-tablet@1x.png");
+    background-image: url("../img/assembly-boards-tablet@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("/img/assembly-boards-tablet@2x.png");
+      background-image: url("../img/assembly-boards-tablet@2x.png");
     }
   }
 
   .products__item--components-lighting-engineering a {
     padding-top: 51px;
     padding-left: 6.4%;
-    background-image: url("/img/components-lighting-engineering-tablet@1x.png");
+    background-image: url("../img/components-lighting-engineering-tablet@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("/img/components-lighting-engineering-tablet@2x.png");
+      background-image: url("../img/components-lighting-engineering-tablet@2x.png");
     }
   }
 }
@@ -207,28 +207,28 @@
   }
 
   .products__item--production-boards a {
-    background-image: url("/img/production-boards-mobile@1x.png");
+    background-image: url("../img/production-boards-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("/img/production-boards-mobile@2x.png");
+      background-image: url("../img/production-boards-mobile@2x.png");
     }
   }
 
   .products__item--assembly-boards a {
-    background-image: url("/img/assembly-boards-mobile@1x.png");
+    background-image: url("../img/assembly-boards-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("/img/assembly-boards-mobile@2x.png");
+      background-image: url("../img/assembly-boards-mobile@2x.png");
     }
   }
 
   .products__item--components-lighting-engineering a {
     padding-top: 28px;
     padding-left: 12.4%;
-    background-image: url("/img/components-lighting-engineering-mobile@1x.png");
+    background-image: url("../img/components-lighting-engineering-mobile@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("/img/components-lighting-engineering-mobile@2x.png");
+      background-image: url("../img/components-lighting-engineering-mobile@2x.png");
     }
   }
 }

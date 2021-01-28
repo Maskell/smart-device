@@ -1,7 +1,7 @@
 .form {
   background-color: #00b2ff;
-  background-image: url("/img/paper-airplane@1x.png"),
-    url("/img/promo-triangles.svg"), url("/img/form-triangles.svg");
+  background-image: url("../img/paper-airplane@1x.png"),
+    url("../img/promo-triangles.svg"), url("../img/form-triangles.svg");
   background-position: calc(75% - 707px) 161px, calc(75% - 855px) -178px,
     calc(75% + 469px) 93px;
   background-size: 511px, auto, auto;
@@ -11,8 +11,8 @@
   font-family: "PT Mono", "Courier New", monospace;
   line-height: 22px;
   @media (min-resolution: $retina-dppx) {
-    background-image: url("/img/paper-airplane@2x.png"),
-      url("/img/promo-triangles.svg"), url("/img/form-triangles.svg");
+    background-image: url("../img/paper-airplane@2x.png"),
+      url("../img/promo-triangles.svg"), url("../img/form-triangles.svg");
   }
 }
 
@@ -142,7 +142,7 @@
     display: none;
     width: 9px;
     height: 6px;
-    background-image: url("/img/icon-check-mark.svg");
+    background-image: url("../img/icon-check-mark.svg");
   }
 }
 
