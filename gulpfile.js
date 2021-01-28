@@ -11,7 +11,6 @@ import imagemin, { mozjpeg, svgo } from "gulp-imagemin";
 import imageminWebp from "imagemin-webp";
 import rename from "gulp-rename";
 import browserSync from "browser-sync";
-import purgecss from "gulp-purgecss";
 import svgstore from "gulp-svgstore";
 import posthtml from "gulp-posthtml";
 import include from "posthtml-include";
@@ -39,11 +38,6 @@ const styles = () =>
   gulp
     .src("source/sass/style.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(
-      purgecss({
-        content: ["source/**/*.html"],
-      })
-    )
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest("build/css/"));
 

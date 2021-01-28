@@ -1,0 +1,155 @@
+.form {
+  background-color: #00b2ff;
+  background-image: url("/img/paper-airplane@1x.png"),
+    url("/img/promo-triangles.svg"), url("/img/form-triangles.svg");
+  background-position: calc(75% - 707px) 161px, calc(75% - 855px) -178px,
+    calc(75% + 469px) 93px;
+  background-size: 511px, auto, auto;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+  line-height: 22px;
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("/img/paper-airplane@2x.png"),
+      url("/img/promo-triangles.svg"), url("/img/form-triangles.svg");
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  padding-left: 38%;
+}
+
+.form__heading {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 82px;
+  margin-right: 40px;
+  margin-left: 1px;
+  font-weight: 400;
+  font-size: 36px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 51px;
+}
+
+.form__description {
+  max-width: 650px;
+  margin-top: -27px;
+  margin-right: 40px;
+  margin-bottom: 51px;
+  margin-left: 6px;
+}
+
+.form__wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  margin-right: auto;
+  margin-bottom: 63px;
+  margin-left: 5px;
+}
+
+.form__input {
+  position: relative;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.form input {
+  width: 270px;
+  padding-top: 14px;
+  padding-right: 17px;
+  padding-bottom: 18px;
+  padding-left: 17px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form__input--user-question {
+  width: 100%;
+  min-height: 160px;
+  margin-bottom: 37px;
+}
+
+.form textarea {
+  width: 570px;
+  min-height: 154px;
+  max-height: 570px;
+  padding-top: 13px;
+  padding-right: 17px;
+  padding-bottom: 13px;
+  padding-left: 17px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  resize: vertical;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form__input--submit button {
+  padding-top: 13px;
+  padding-right: 79px;
+  padding-bottom: 14px;
+  padding-left: 79px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.form__input--user-agreement label {
+  display: block;
+  padding-top: 8px;
+  padding-left: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 16px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ffffff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    display: none;
+    width: 9px;
+    height: 6px;
+    background-image: url("../../img/icon-check-mark.svg");
+  }
+}
+
+input:checked + label::after {
+  display: block;
+}
+
+input:focus + label::before {
+  outline: auto;
+}
