@@ -263,6 +263,37 @@
         </ul>
       </div>
     </footer>
+    <div class="popup">
+      <div class="popup__wrapper">
+        <button class="popup__button popup__button--close" aria-label="Закрыть модальное окно"></button>
+        <p class="popup__heading">Закажите звонок</p>
+        <p class="popup__description">
+          Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+        </p>
+        <form class="popup__form">
+          <div class="popup__input-wrapper popup__input-wrapper--user-name">
+            <label class="visually-hidden" for="popup-user-name">Ваше имя</label>
+            <input type="text" id="popup-user-name" placeholder="Имя">
+          </div>
+          <div class="popup__input-wrapper popup__input-wrapper--user-phone-number">
+            <label class="visually-hidden" for="popup-user-phone-number">Ваш номер телефона</label>
+            <input type="tel" id="popup-user-phone-number" placeholder="Телефон">
+          </div>
+          <div class="popup__input-wrapper popup__input-wrapper--user-question">
+            <label class="visually-hidden" for="popup-user-question">Введите ваш вопрос</label>
+            <textarea type="text" id="popup-user-question" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <div class="popup__input-wrapper popup__input-wrapper--submit">
+            <button type="submit">Отправить</button>
+          </div>
+          <div class="popup__input-wrapper popup__input-wrapper--user-agreement">
+            <input class="visually-hidden" type="checkbox" id="popup-agreement" checked="">
+            <label for="popup-user-agreement">Я согласен на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/popup.js"></script>
     <script src="js/accordeon.js"></script>
   </body>
 </html>
