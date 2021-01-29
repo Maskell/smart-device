@@ -46,6 +46,7 @@
   padding-top: 49px;
   padding-right: 45%;
   padding-left: 11.8%;
+  background-color: rgb(22, 37, 45);
   background-size: cover;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -98,6 +99,15 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/components-lighting-engineering-desktop@2x.png");
   }
+}
+
+.products a:hover,
+.products a:focus {
+  opacity: 0.8;
+}
+
+.products a:active {
+  opacity: 0.6;
 }
 
 @media (max-width: $tablet-max-width) {

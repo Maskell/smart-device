@@ -65,6 +65,17 @@
   line-height: 16px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: #00b2ff;
+    color: #ffffff;
+  }
+
+  &:active {
+    border-color: #008ecc;
+    background-color: #008ecc;
+  }
 }
 
 @media (max-width: $tablet-max-width) {
@@ -118,6 +129,7 @@
     padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
+
     &::before {
       content: none;
     }

@@ -6,22 +6,15 @@ import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
 import plumber from "gulp-plumber";
-import terser from "gulp-terser";
 import imagemin, { mozjpeg, svgo } from "gulp-imagemin";
-import imageminWebp from "imagemin-webp";
+import imageminPngquant from "imagemin-pngquant";
 import rename from "gulp-rename";
 import browserSync from "browser-sync";
 import svgstore from "gulp-svgstore";
-import posthtml from "gulp-posthtml";
-import include from "posthtml-include";
 
 const clean = () => del("build/**/*", { force: true });
 
-const html = () =>
-  gulp
-    .src("source/*.html")
-    .pipe(posthtml([include()]))
-    .pipe(gulp.dest("build/"));
+const html = () => gulp.src("source/*.html").pipe(gulp.dest("build/"));
 
 const devStyles = () =>
   gulp
@@ -41,8 +34,7 @@ const styles = () =>
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest("build/css/"));
 
-const scripts = () =>
-  gulp.src("source/js/*").pipe(terser()).pipe(gulp.dest("build/js"));
+const scripts = () => gulp.src("source/js/*").pipe(gulp.dest("build/js"));
 
 const fonts = () => gulp.src("source/fonts/*.*").pipe(gulp.dest("build/fonts"));
 
@@ -52,22 +44,15 @@ const images = () =>
     .pipe(
       imagemin([
         mozjpeg({ quality: 75 }),
-        imagemin.optipng({ interlaced: true }),
+        imageminPngquant({ quality: [0.7, 0.9], speed: 1, floyd: 1 }),
         svgo(),
       ])
     )
     .pipe(gulp.dest("build/img"));
 
-const webp = () =>
-  gulp
-    .src("source/img/*.{jpg,png}")
-    .pipe(imagemin([imageminWebp()]))
-    .pipe(rename({ extname: ".webp" }))
-    .pipe(gulp.dest("build/img/"));
-
 const sprite = () =>
   gulp
-    .src("source/img/{icon-*,htmlacademy*}.svg")
+    .src("source/img/icon-*.svg")
     .pipe(imagemin([svgo()]))
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("sprite_auto.svg"))
@@ -82,7 +67,6 @@ const server = () => {
 };
 
 const watchFiles = () => {
-  gulp.watch("source/img/*", images, sprite, html);
   gulp.watch("source/sass/**/*.scss", devStyles);
   gulp.watch("source/js/*.js", scripts);
   gulp.watch("source/*.html", html);
@@ -93,11 +77,11 @@ const watchFiles = () => {
 
 export const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, fonts, images, webp, sprite)
+  gulp.parallel(html, styles, scripts, fonts, images, sprite)
 );
 
 export default gulp.series(
   clean,
-  gulp.parallel(html, devStyles, scripts, fonts, images, webp, sprite),
+  gulp.parallel(html, devStyles, scripts, fonts, images, sprite),
   gulp.parallel(server, watchFiles)
 );

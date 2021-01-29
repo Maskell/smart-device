@@ -10,6 +10,7 @@
   font-size: 16px;
   font-family: "PT Mono", "Courier New", monospace;
   line-height: 22px;
+
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/paper-airplane@2x.png"),
       url("../img/promo-triangles.svg"), url("../img/form-triangles.svg");
@@ -71,6 +72,7 @@
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+  outline-color: white;
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -93,6 +95,8 @@
   padding-left: 17px;
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  outline-color: white;
   resize: vertical;
 
   &::placeholder {
@@ -109,6 +113,7 @@
   border-radius: 5px;
   background-color: transparent;
   color: #ffffff;
+  outline-color: white;
   font-weight: 700;
   font-size: 14px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -116,6 +121,10 @@
   letter-spacing: 0.7px;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .form__input-wrapper--user-agreement label {
@@ -135,6 +144,7 @@
     width: 16px;
     height: 16px;
     border: 1px solid #ffffff;
+    outline-color: white;
   }
 
   &::after {
@@ -149,12 +159,21 @@
   }
 }
 
-input:checked + label::after {
+.form input:checked + label::after {
   display: block;
 }
 
-input:focus + label::before {
-  outline: auto;
+.form__input-wrapper label:hover,
+.form__input-wrapper label:focus {
+  color: #ffffff;
+}
+
+.form input:focus + label {
+  color: #ffffff;
+
+  &::before {
+    outline: auto;
+  }
 }
 
 @media (max-width: $tablet-max-width) {

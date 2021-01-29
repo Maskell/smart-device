@@ -81,6 +81,7 @@
     background-repeat: no-repeat;
   }
 }
+
 .page-header__contacts-item--email {
   margin-right: 78px;
 }
@@ -119,12 +120,12 @@
   text-transform: uppercase;
 }
 
-.page-header a:hover,
-.page-header a:focus {
+.page-header__contacts-item a:hover,
+.page-header__contacts-item a:focus {
   opacity: 0.6;
 }
 
-.page-header a:active {
+.page-header__contacts-item a:active {
   opacity: 0.3;
 }
 

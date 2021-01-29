@@ -1,4 +1,5 @@
 .page-footer {
+  background-color: #fafafa;
   color: #1b2d37;
 }
 
@@ -58,8 +59,8 @@
 
 .page-footer__list--social {
   display: flex;
-  margin-top: 51px;
-  margin-left: -2px;
+  margin-top: 55px;
+  margin-left: 2px;
 }
 
 .page-footer__social-item--facebook {
@@ -76,18 +77,6 @@
   height: 35px;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.page-footer__social-item--facebook a {
-  background-image: url("../img/icon-facebook.svg");
-}
-
-.page-footer__social-item--odnoklassniki a {
-  background-image: url("../img/icon-odnoklassniki.svg");
-}
-
-.page-footer__social-item--vk a {
-  background-image: url("../img/icon-vk.svg");
 }
 
 .page-footer__sitemap-wrapper {
@@ -140,15 +129,16 @@
 
 .page-footer__list--contacts {
   margin-left: 2px;
-  opacity: 0.5;
 }
 
 .page-footer__contacts-item a {
   color: #1b2d37;
+  opacity: 0.5;
 }
 
 .page-footer__contacts-item p {
   margin: 0;
+  opacity: 0.5;
 }
 
 .page-footer__copyright-wrapper {
@@ -160,11 +150,12 @@
   display: flex;
   max-width: 1440px;
   margin-right: auto;
+  margin-bottom: 0;
   margin-left: auto;
+  padding-bottom: 13px;
   font-size: 13px;
   line-height: 24px;
   text-transform: uppercase;
-  opacity: 0.5;
 }
 
 .page-footer__list--copyright p,
@@ -172,6 +163,7 @@
   margin: 0;
   color: #1b2d37;
   letter-spacing: 0.52px;
+  opacity: 0.5;
 }
 
 .page-footer__copyright-item {
@@ -193,6 +185,22 @@
 
 .page-footer__copyright-item--developer {
   margin-right: 16px;
+}
+
+.page-footer__copyright-item--developer p {
+  color: #8a9398;
+  opacity: 1;
+}
+
+.page-footer__list a {
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.75;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -251,10 +259,10 @@
   }
 
   .page-footer__list--social {
-    margin-top: 16px;
-    margin-right: 10px;
-    margin-bottom: 36px;
-    margin-left: 0;
+    margin-top: 21px;
+    margin-right: 6px;
+    margin-bottom: 31px;
+    margin-left: 4px;
   }
 
   .page-footer__sitemap-wrapper {
@@ -309,9 +317,9 @@
   }
 
   .page-footer__list--social {
-    margin-top: 28px;
-    margin-bottom: 50px;
-    margin-left: 10px;
+    margin-top: 32px;
+    margin-bottom: 46px;
+    margin-left: 14px;
   }
 
   .page-footer__sitemap-wrapper {
