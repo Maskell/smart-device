@@ -1,5 +1,6 @@
 .page-header {
   position: absolute;
+  z-index: 1;
   width: 100%;
   max-width: 2560px;
   color: #ffffff;
@@ -116,6 +117,15 @@
   line-height: 16px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+}
+
+.page-header a:hover,
+.page-header a:focus {
+  opacity: 0.6;
+}
+
+.page-header a:active {
+  opacity: 0.3;
 }
 
 @media (max-width: $tablet-max-width) {

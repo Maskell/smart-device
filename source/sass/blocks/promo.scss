@@ -93,12 +93,20 @@
   left: -25px;
   display: inline-block;
   vertical-align: middle;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
   font-family: "PT Mono", "Courier New", monospace;
   line-height: 16px;
-  opacity: 0.5;
   transform: rotate(-90deg);
+}
+
+.promo a:hover,
+.promo a:focus {
+  opacity: 0.6;
+}
+
+.promo a:active {
+  opacity: 0.3;
 }
 
 @media (max-width: $tablet-max-width) {

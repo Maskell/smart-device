@@ -83,6 +83,15 @@
   fill: #ffffff;
 }
 
+.promo a:hover,
+.promo a:focus {
+  opacity: 0.6;
+}
+
+.promo a:active {
+  opacity: 0.3;
+}
+
 @media (max-width: $tablet-max-width) {
   .advantages__list {
     margin-top: 29px;
