@@ -19,33 +19,12 @@
 }
 
 .page-header__logo {
-  display: block;
   margin-right: auto;
 }
 
 .page-header__logo-image {
   margin-top: 23px;
   margin-left: 3px;
-}
-
-.page-header__logo-text {
-  margin-top: -50px;
-  margin-left: 71px;
-  font-weight: 700;
-  font-size: 25px;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  line-height: 29px;
-}
-
-.page-header__logo-description {
-  margin-top: -24px;
-  margin-left: 71px;
-  color: #788891;
-  font-weight: 500;
-  font-size: 12px;
-  font-family: "Roboto", "Arial", sans-serif;
-  line-height: 14px;
-  text-transform: lowercase;
 }
 
 .page-header__contacts-list {
@@ -135,14 +114,6 @@
     margin-left: 15px;
   }
 
-  .page-header__logo-text {
-    margin-left: 83px;
-  }
-
-  .page-header__logo-description {
-    margin-left: 83px;
-  }
-
   .page-header__contacts-list {
     min-width: auto;
     margin-top: 10px;
@@ -189,11 +160,6 @@
     height: 38px;
     margin-top: 7px;
     margin-left: 7px;
-  }
-
-  .page-header__logo-text,
-  .page-header__logo-description {
-    display: none;
   }
 
   .page-header__contacts-list {
