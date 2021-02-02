@@ -8,10 +8,11 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint && npm run prettier",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint 'source/**/*.{css,scss}' --max-warnings 0",
-    "eslint": "eslint 'source/**/*.js'"
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss --max-warnings 0",
+    "eslint": "eslint \"source/**/*.js\"",
+    "prettier": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -77,6 +78,6 @@
     "source/**/*.{css,scss}": [
       "stylelint --fix --max-warnings 0"
     ],
-    "source/**/*.{js,css,scss,html}": "prettier --write"
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
