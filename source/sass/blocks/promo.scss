@@ -94,7 +94,7 @@
   }
 }
 
-.promo__button--mobile {
+.promo__button-text--mobile {
   display: none;
 }
 
@@ -203,15 +203,17 @@
   }
 
   .promo__button {
-    display: none;
-  }
-
-  .promo__button--mobile {
-    display: inline-block;
-    vertical-align: middle;
     margin-bottom: 60px;
     margin-left: 8px;
     padding-right: 32px;
     padding-left: 32px;
+  }
+
+  .promo__button-text--desktop {
+    display: none;
+  }
+
+  .promo__button-text--mobile {
+    display: inline;
   }
 }
