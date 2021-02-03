@@ -1,15 +1,23 @@
+/* eslint-disable func-names */
+/* eslint-disable no-undef */
 (function () {
   const headerButton = document.querySelector(
     ".page-header__contacts-item--call-back a"
   );
   const popup = document.querySelector(".popup");
   const closeButton = popup.querySelector(".popup__button--close");
-  const form = popup.querySelector(".popup__form");
-  const userName = popup.querySelector("#popup-user-name");
-  const phone = popup.querySelector("#popup-user-phone-number");
-  const message = popup.querySelector("#popup-user-question");
-  let isStorageSupport = true;
+  const popupForm = popup.querySelector(".popup__form");
+  const popupUserName = popup.querySelector("#popup-user-name");
+  const popupPhone = popup.querySelector("#popup-user-phone-number");
+  const popupMessage = popup.querySelector("#popup-user-question");
+
+  const formSection = document.querySelector(".form");
+  const userName = formSection.querySelector("#user-name");
+  const phone = formSection.querySelector("#user-phone-number");
+  const message = formSection.querySelector("#user-question");
+
   const storage = {};
+  let isStorageSupport = true;
 
   const openPopup = () => {
     popup.classList.add("popup--show");
@@ -34,18 +42,26 @@
     openPopup();
 
     if (storage.name) {
-      userName.value = storage.name;
-      phone.value = storage.phone;
-      message.value = storage.message;
-      message.focus();
+      popupUserName.value = storage.name;
+      popupPhone.value = storage.phone;
+      popupMessage.value = storage.message;
+      popupMessage.focus();
     } else {
-      userName.focus();
+      popupUserName.focus();
     }
   });
 
   closeButton.addEventListener("click", (evt) => {
     evt.preventDefault();
     closePopup();
+  });
+
+  popupForm.addEventListener("submit", () => {
+    if (isStorageSupport) {
+      localStorage.setItem("name", popupUserName.value);
+      localStorage.setItem("phone", popupPhone.value);
+      localStorage.setItem("message", popupMessage.value);
+    }
   });
 
   form.addEventListener("submit", () => {
@@ -55,6 +71,12 @@
       localStorage.setItem("message", message.value);
     }
   });
+
+  if (storage.name) {
+    userName.value = storage.name;
+    phone.value = storage.phone;
+    message.value = storage.message;
+  }
 
   window.addEventListener("keydown", (evt) => {
     if (evt.code === "Escape") {
@@ -69,6 +91,13 @@
     if (evt.target === popup) {
       closePopup();
     }
+  });
+
+  IMask(document.querySelector("#popup-user-phone-number"), {
+    mask: "+{7}(000)000-00-00",
+  });
+  IMask(document.querySelector("#user-phone-number"), {
+    mask: "+{7}(000)000-00-00",
   });
 })();
 
