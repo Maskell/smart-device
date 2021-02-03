@@ -5,8 +5,14 @@
     "stylelint-config-htmlacademy",
     "stylelint-config-prettier"
   ],
-  "plugins": ["stylelint-scss", "stylelint-order", "stylelint-a11y"],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order",
+    "stylelint-a11y",
+    "stylelint-prettier"
+  ],
   "rules": {
+    "prettier/prettier": true,
     "selector-max-type": 2,
     "rule-empty-line-before": [
       "always",
