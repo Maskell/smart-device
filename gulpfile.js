@@ -7,7 +7,8 @@ import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
 import plumber from "gulp-plumber";
 import imagemin, { mozjpeg, svgo } from "gulp-imagemin";
-import imageminPngquant from "imagemin-pngquant";
+import pngquant from "imagemin-pngquant";
+import webp from "imagemin-webp";
 import rename from "gulp-rename";
 import browserSync from "browser-sync";
 import svgstore from "gulp-svgstore";
@@ -44,11 +45,18 @@ const images = () =>
     .pipe(
       imagemin([
         mozjpeg({ quality: 75 }),
-        imageminPngquant({ quality: [0.7, 0.9], speed: 1, floyd: 1 }),
+        pngquant({ quality: [0.7, 0.9], speed: 1, floyd: 1 }),
         svgo(),
       ])
     )
     .pipe(gulp.dest("build/img"));
+
+const webpImages = () =>
+  gulp
+    .src("source/img/*.{jpg,png}")
+    .pipe(imagemin([webp()]))
+    .pipe(rename({ extname: ".webp" }))
+    .pipe(gulp.dest("build/img/"));
 
 const sprite = () =>
   gulp
@@ -72,16 +80,15 @@ const watchFiles = () => {
   gulp.watch("source/*.html", html);
   gulp.watch("build/*.html").on("change", browserSync.reload);
   gulp.watch("build/js/*.js").on("change", browserSync.reload);
-  gulp.watch("build/img/*").on("change", browserSync.reload);
 };
 
 export const build = gulp.series(
   clean,
-  gulp.parallel(html, styles, scripts, fonts, images, sprite)
+  gulp.parallel(html, styles, scripts, fonts, images, webpImages, sprite)
 );
 
 export default gulp.series(
   clean,
-  gulp.parallel(html, devStyles, scripts, fonts, images, sprite),
+  gulp.parallel(html, devStyles, scripts, fonts, images, webpImages, sprite),
   gulp.parallel(server, watchFiles)
 );

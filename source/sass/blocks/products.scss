@@ -43,12 +43,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  padding-top: 49px;
-  padding-right: 45%;
-  padding-left: 11.8%;
-  background-color: rgb(22, 37, 45);
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #ffffff;
   font-size: 20px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -58,7 +52,7 @@
     content: "";
     position: absolute;
     right: 0;
-    bottom: 1px;
+    bottom: 0;
     width: 63px;
     height: 63px;
     background-color: #00b2ff;
@@ -75,39 +69,27 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
-}
 
-.products__item--production-boards a {
-  background-image: url("../img/production-boards-desktop@1x.png");
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/production-boards-desktop@2x.png");
+  &:active {
+    opacity: 0.3;
   }
 }
 
-.products__item--assembly-boards a {
-  background-image: url("../img/assembly-boards-desktop@1x.png");
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/assembly-boards-desktop@2x.png");
-  }
+.products__item span {
+  position: absolute;
+  top: 49px;
+  left: 11.8%;
+  display: block;
+  max-width: 170px;
 }
 
-.products__item--components-lighting-engineering a {
-  background-image: url("../img/components-lighting-engineering-desktop@1x.png");
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/components-lighting-engineering-desktop@2x.png");
-  }
-}
-
-.products a:hover,
-.products a:focus {
-  opacity: 0.8;
-}
-
-.products a:active {
-  opacity: 0.6;
+.products__item img {
+  object-fit: cover;
 }
 
 @media (max-width: $tablet-max-width) {
@@ -126,59 +108,21 @@
 
   .products__item {
     width: auto;
-    max-width: none;
+    max-width: 720px;
     height: 256px;
+    margin-right: auto;
     margin-bottom: 46px;
+    margin-left: auto;
   }
 
-  .products a {
-    padding-top: 41px;
-    padding-right: 70%;
-    padding-left: 6.2%;
-
-    &::before {
-      right: -1px;
-      bottom: -1px;
-    }
-
-    &::after {
-      right: 25px;
-      bottom: 26px;
-    }
+  .products__item img {
+    width: 720px;
+    height: 256px;
   }
 
-  .products__item--production-boards a {
-    background-image: url("../img/production-boards-tablet@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/production-boards-tablet@2x.png");
-    }
-
-    &::before {
-      right: 4px;
-    }
-
-    &::after {
-      right: 30px;
-    }
-  }
-
-  .products__item--assembly-boards a {
-    background-image: url("../img/assembly-boards-tablet@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/assembly-boards-tablet@2x.png");
-    }
-  }
-
-  .products__item--components-lighting-engineering a {
-    padding-top: 51px;
-    padding-left: 6.4%;
-    background-image: url("../img/components-lighting-engineering-tablet@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/components-lighting-engineering-tablet@2x.png");
-    }
+  .products__item span {
+    top: 41px;
+    left: 6.2%;
   }
 }
 
@@ -200,45 +144,8 @@
     margin-left: 5px;
   }
 
-  .products a {
-    padding-top: 18px;
-    padding-right: 35%;
-    padding-left: 12%;
-
-    &::before {
-      right: 0;
-      bottom: 2px;
-    }
-
-    &::after {
-      right: 29px;
-      bottom: 29px;
-    }
-  }
-
-  .products__item--production-boards a {
-    background-image: url("../img/production-boards-mobile@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/production-boards-mobile@2x.png");
-    }
-  }
-
-  .products__item--assembly-boards a {
-    background-image: url("../img/assembly-boards-mobile@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/assembly-boards-mobile@2x.png");
-    }
-  }
-
-  .products__item--components-lighting-engineering a {
-    padding-top: 28px;
-    padding-left: 12.4%;
-    background-image: url("../img/components-lighting-engineering-mobile@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/components-lighting-engineering-mobile@2x.png");
-    }
+  .products__item span {
+    top: 18px;
+    left: 12%;
   }
 }
