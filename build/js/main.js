@@ -101,29 +101,6 @@
   });
 })();
 
-// (function () {
-
-//   const isStorageSupport = true;
-//   const storage = {};
-
-//   try {
-//     storage.name = localStorage.getItem("name");
-//     storage.phone = localStorage.getItem("phone");
-//     storage.message = localStorage.getItem("message");
-//   } catch (err) {
-//     isStorageSupport = false;
-//   }
-
-//   if (storage.name) {
-//     userName.value = storage.name;
-//     phone.value = storage.phone;
-//     message.value = storage.message;
-//     message.focus();
-//   } else {
-//     userName.focus();
-//   }
-// })();
-
 (function () {
   const footerSection = document.querySelector(".page-footer__wrapper");
   const accordeonSections = footerSection.querySelectorAll(".accordeon");
