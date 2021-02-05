@@ -2,16 +2,16 @@
 <html lang="ru">
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-      content="Промосайт компании 'Smart Device'. Производство и монтаж печатных плат, поставка комплектующих для светотехники, блоков и модулей" />
+      content="Промосайт компании 'Smart Device'. Производство и монтаж печатных плат, поставка комплектующих для светотехники, блоков и модулей">
     <title>Smart Device</title>
-    <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -19,9 +19,9 @@
       <div class="page-header__wrapper">
         <a class="page-header__logo">
           <picture>
-            <source media="(max-width: 767px)" srcset="img/logo-header-mobile.svg" />
+            <source media="(max-width: 767px)" srcset="img/logo-header-mobile.svg">
             <img class="page-header__logo-image" src="img/logo-header-desktop.svg" width="201" height="52"
-              alt="Логотип компании Smart Device" />
+              alt="Логотип компании Smart Device">
           </picture>
         </a>
         <ul class="page-header__contacts-list">
@@ -32,7 +32,7 @@
             <a href="tel:+74950005252">+7 (495) 000 52 52</a>
           </li>
           <li class="page-header__contacts-item page-header__contacts-item--call-back">
-            <a href="#">Заказать звонок</a>
+            <a href="form.html">Заказать звонок</a>
           </li>
         </ul>
       </div>
@@ -155,7 +155,7 @@
                 <span>Производство печатных плат</span>
                 <picture>
                   <source type="image/webp" srcset="img/production-boards-desktop@1x.webp 1x,
-                  img/production-boards-desktop@2x.webp 2x" />
+                  img/production-boards-desktop@2x.webp 2x">
                   <!-- 1х: 370px; 2x: 740x -->
                   <img src="img/production-boards-desktop@1x.png" srcset="img/production-boards-desktop@2x.png 2x"
                     alt="Изображение с процессом производства печатных плат" width="370" height="620">
@@ -167,7 +167,7 @@
                 <span>Монтаж печатных плат</span>
                 <picture>
                   <source type="image/webp" srcset="img/assembly-boards-desktop@1x.webp 1x,
-                  img/assembly-boards-desktop@2x.webp 2x" />
+                  img/assembly-boards-desktop@2x.webp 2x">
                   <!-- 1х: 370px; 2x: 740x -->
                   <img src="img/assembly-boards-desktop@1x.png" srcset="img/assembly-boards-desktop@2x.png 2x"
                     alt="Изображение с процессом монтажа печатных плат" width="370" height="620">
@@ -179,7 +179,7 @@
                 <span>Комплектующие для светотехники</span>
                 <picture>
                   <source type="image/webp" srcset="img/components-lighting-engineering-desktop@1x.webp 1x,
-                  img/components-lighting-engineering-desktop@2x.webp 2x" />
+                  img/components-lighting-engineering-desktop@2x.webp 2x">
                   <!-- 1х: 370px; 2x: 740x -->
                   <img src="img/components-lighting-engineering-desktop@1x.png"
                     srcset="img/components-lighting-engineering-desktop@2x.png 2x"
@@ -198,21 +198,21 @@
           <form>
             <div class="form__input-wrapper form__input-wrapper--user-name">
               <label class="visually-hidden" for="user-name">Ваше имя</label>
-              <input type="text" id="user-name" placeholder="Имя" />
+              <input type="text" id="user-name" name="user-name" placeholder="Имя" required>
             </div>
             <div class="form__input-wrapper form__input-wrapper--user-phone-number">
               <label class="visually-hidden" for="user-phone-number">Ваш номер телефона</label>
-              <input type="tel" id="user-phone-number" placeholder="Телефон" />
+              <input type="tel" id="user-phone-number" name="user-phone-number" placeholder="Телефон" required>
             </div>
             <div class="form__input-wrapper form__input-wrapper--user-question">
               <label class="visually-hidden" for="user-question">Введите ваш вопрос</label>
-              <textarea id="user-question" placeholder="Ваш вопрос"></textarea>
+              <textarea id="user-question" name="user-question" placeholder="Ваш вопрос" required></textarea>
             </div>
             <div class="form__input-wrapper form__input-wrapper--submit">
               <button type="submit">Задать вопрос</button>
             </div>
             <div class="form__input-wrapper form__input-wrapper--user-agreement">
-              <input class="visually-hidden" type="checkbox" id="user-agreement" checked />
+              <input class="visually-hidden" type="checkbox" id="user-agreement" name="user-agreement" checked required>
               <label for="user-agreement">Я согласен на обработку персональных данных</label>
             </div>
           </form>
@@ -224,7 +224,7 @@
         <div class="page-footer__social-wrapper">
           <a class="page-footer__logo">
             <img class="page-footer__logo-image" src="img/logo-footer.svg" width="215" height="52"
-              alt="Логотип компании Smart Device" />
+              alt="Логотип компании Smart Device">
           </a>
           <!-- Дублирование для планшета и мобильного -->
           <p class="page-footer__copyright">1999-2018 SD Service Devices</p>
@@ -326,21 +326,22 @@
         <form class="popup__form">
           <div class="popup__input-wrapper popup__input-wrapper--user-name">
             <label class="visually-hidden" for="popup-user-name">Ваше имя</label>
-            <input type="text" id="popup-user-name" placeholder="Имя" />
+            <input type="text" id="popup-user-name" name="user-name" placeholder="Имя" required>
           </div>
           <div class="popup__input-wrapper popup__input-wrapper--user-phone-number">
             <label class="visually-hidden" for="popup-user-phone-number">Ваш номер телефона</label>
-            <input type="tel" id="popup-user-phone-number" placeholder="Телефон" />
+            <input type="tel" id="popup-user-phone-number" name="user-phone-number" placeholder="Телефон" required>
           </div>
           <div class="popup__input-wrapper popup__input-wrapper--user-question">
             <label class="visually-hidden" for="popup-user-question">Введите ваш вопрос</label>
-            <textarea id="popup-user-question" placeholder="Ваш вопрос"></textarea>
+            <textarea id="popup-user-question" name="user-question" placeholder="Ваш вопрос" required></textarea>
           </div>
           <div class="popup__input-wrapper popup__input-wrapper--submit">
             <button type="submit">Отправить</button>
           </div>
           <div class="popup__input-wrapper popup__input-wrapper--user-agreement">
-            <input class="visually-hidden" type="checkbox" id="popup-user-agreement" checked />
+            <input class="visually-hidden" type="checkbox" id="popup-user-agreement" name="user-agreement" checked
+              required>
             <label for="popup-user-agreement">Я согласен на обработку персональных данных</label>
           </div>
         </form>

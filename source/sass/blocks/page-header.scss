@@ -30,8 +30,11 @@
 .page-header__contacts-list {
   display: flex;
   flex-wrap: wrap;
-  min-width: 670px;
-  margin-top: 40px;
+  justify-content: space-between;
+  width: 670px;
+  padding-top: 11px;
+  padding-right: 6px;
+  padding-bottom: 11px;
   padding-left: 0;
   list-style: none;
   font-size: 16px;
@@ -39,50 +42,54 @@
 }
 
 .page-header__contacts-item {
-  position: relative;
+  min-height: 45px;
+  margin-bottom: 10px;
+}
+
+.page-header__contacts-item--phone-number {
+  margin-left: 29px;
 }
 
 .page-header__contacts-item a {
+  position: relative;
+  display: block;
+  margin-top: 13px;
   padding-left: 44px;
   color: #ffffff;
 }
 
-.page-header__contacts-item--email a {
+.page-header__contacts-item--email a,
+.page-header__contacts-item--phone-number a {
   &::before {
     content: "";
     position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.page-header__contacts-item--email a {
+  &::before {
     top: 2px;
     left: 5px;
     width: 19px;
     height: 14px;
     background-image: url("../img/icon-envelope.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
   }
-}
-
-.page-header__contacts-item--email {
-  margin-right: 78px;
 }
 
 .page-header__contacts-item--phone-number a {
   &::before {
-    content: "";
-    position: absolute;
     top: 0;
     left: 10px;
     width: 18px;
     height: 18px;
     background-image: url("../img/icon-phone-call.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
   }
 }
 
 .page-header__contacts-item--call-back a {
-  display: block;
-  margin-top: -13px;
-  margin-left: 49px;
+  margin-top: 0;
   padding-top: 13px;
   padding-right: 27px;
   padding-bottom: 14px;
@@ -115,20 +122,21 @@
   }
 
   .page-header__contacts-list {
-    min-width: auto;
-    margin-top: 10px;
+    width: auto;
+    max-width: 300px;
+    padding-right: 0;
     font-size: 0;
   }
 
-  .page-header__contacts-item a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    padding-left: 0;
+  .page-header__contacts-item--phone-number {
+    margin-left: 10px;
   }
 
-  .page-header__contacts-item--email {
-    margin-right: 10px;
+  .page-header__contacts-item a {
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
+    padding-left: 0;
   }
 
   .page-header__contacts-item--email a {
@@ -163,8 +171,15 @@
   }
 
   .page-header__contacts-list {
-    margin-top: 4px;
+    max-width: 150px;
     margin-right: -4px;
+    padding-top: 0;
+  }
+
+  .page-header__contacts-item {
+    min-height: 40px;
+    margin-top: 5px;
+    margin-left: 10px;
   }
 
   .page-header__contacts-item a {
@@ -174,8 +189,8 @@
 
   .page-header__contacts-item--email a {
     &::before {
-      top: 11px;
-      left: 8px;
+      top: 10px;
+      left: 7px;
     }
   }
 
