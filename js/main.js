@@ -103,35 +103,39 @@
 
 (function () {
   const footerSection = document.querySelector(".page-footer__wrapper");
-  const accordeonSections = footerSection.querySelectorAll(".accordeon");
-  const expandSection = (sectionIndex) => {
-    if (sectionIndex >= 0 && sectionIndex < accordeonSections.length) {
-      const section = accordeonSections.item(sectionIndex);
-      section
-        .querySelector(".page-footer__accordeon-button")
-        .classList.add("page-footer__accordeon-button--js-collapse");
+  const accordionSections = footerSection.querySelectorAll(".accordion");
 
-      section
-        .querySelector(".page-footer__list")
-        .classList.remove("page-footer__list--js-hidden");
+  accordionSections.forEach((section, index) => {
+    const button = section.querySelector(".page-footer__accordion-button");
+
+    button.classList.add("page-footer__accordion-button--js");
+    section.classList.add("accordion--collapsed");
+
+    if (index === 1) {
+      section.classList.remove("accordion--collapsed");
+      section.classList.add("accordion--expanded");
     }
-  };
-
-  accordeonSections.forEach((section) => {
-    const accordeonButton = section.querySelector(
-      ".page-footer__accordeon-button"
-    );
-    const accordeonList = section.querySelector(".page-footer__list");
-    const toggleSection = () => {
-      accordeonButton.classList.toggle(
-        "page-footer__accordeon-button--js-collapse"
-      );
-      accordeonList.classList.toggle("page-footer__list--js-hidden");
-    };
-    accordeonButton.classList.add("page-footer__accordeon-button--js-shown");
-    accordeonList.classList.add("page-footer__list--js-hidden");
-    accordeonButton.addEventListener("click", toggleSection);
   });
 
-  expandSection(1);
+  const toggleSections = (evt) => {
+    const { target } = evt;
+
+    if (target.tagName === "BUTTON") {
+      accordionSections.forEach((section) => {
+        if (section.classList.contains("accordion--collapse")) {
+          return;
+        }
+        section.classList.remove("accordion--expanded");
+        section.classList.add("accordion--collapsed");
+      });
+
+      const currentSection = target.closest("div");
+
+      if (currentSection.classList.contains("accordion--collapsed")) {
+        currentSection.classList.remove("accordion--collapsed");
+        currentSection.classList.add("accordion--expanded");
+      }
+    }
+  };
+  footerSection.addEventListener("click", toggleSections);
 })();
