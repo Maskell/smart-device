@@ -121,6 +121,14 @@
     const { target } = evt;
 
     if (target.tagName === "BUTTON") {
+      const currentSection = target.closest("div");
+
+      if (currentSection.classList.contains("accordion--expanded")) {
+        currentSection.classList.remove("accordion--expanded");
+        currentSection.classList.add("accordion--collapsed");
+        return;
+      }
+
       accordionSections.forEach((section) => {
         if (section.classList.contains("accordion--collapse")) {
           return;
@@ -129,12 +137,8 @@
         section.classList.add("accordion--collapsed");
       });
 
-      const currentSection = target.closest("div");
-
-      if (currentSection.classList.contains("accordion--collapsed")) {
-        currentSection.classList.remove("accordion--collapsed");
-        currentSection.classList.add("accordion--expanded");
-      }
+      currentSection.classList.remove("accordion--collapsed");
+      currentSection.classList.add("accordion--expanded");
     }
   };
   footerSection.addEventListener("click", toggleSections);
