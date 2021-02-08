@@ -284,13 +284,14 @@
 
   .form__input-wrapper {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     padding-right: 5px;
     padding-left: 5px;
   }
 
   .form input {
     width: 100%;
+    min-height: 51px;
     margin-right: 0;
     margin-left: 0;
   }
@@ -311,6 +312,7 @@
 
   .form__input-wrapper--submit button {
     display: block;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-right: 90px;
